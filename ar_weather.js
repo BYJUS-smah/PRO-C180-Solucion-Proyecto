@@ -27,7 +27,15 @@ function get_weather() {
         success: function (response) {
             let name = response.name
             let weather = response.weather[0].main
-
+            $("#scene_container").append(
+                `
+                    <a-entity gps-entity-place="latitude: ${steps[i].maneuver.location[1]}; longitude: ${steps[i].maneuver.location[0]};">
+                        <a-entity>
+                            <a-text height="50" value="Weather forcast is ${weather} at ${name}"></a-text>
+                        </a-entity>
+                    </a-entity>
+                `
+            )
         }
     })
 }
