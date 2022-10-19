@@ -1,7 +1,7 @@
 let latitude, longitude, destination;
 
 $(document).ready(function () {
-	alert("Please allow the device to know your location!")
+	alert("¡Por favor, permite que el dispositivo conozca tu ubicación!")
 	initGeolocation();
 })
 
@@ -10,7 +10,7 @@ function initGeolocation() {
 		navigator.geolocation.getCurrentPosition(success);
 	}
 	else {
-		alert("Sorry, your browser does not support geolocation services.");
+		alert("Lo sentimos, tu navegador no es compatible con los servicios de geolocalización.");
 	}
 }
 
@@ -24,7 +24,7 @@ function success(position) {
 	longitude = position.coords.longitude;
 	latitude = position.coords.latitude
 
-	// Initializing Mapbox
+	// Inicializar Mapbox
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYXBvb3J2ZWxvdXMiLCJhIjoiY2ttZnlyMDgzMzlwNTJ4a240cmEzcG0xNyJ9.-nSyL0Gy2nifDibXJg4fTA';
 
 	var map = new mapboxgl.Map({
@@ -45,7 +45,7 @@ function success(position) {
 
 	var img1 = document.querySelector("#amber")
 
-	// Create a Amber Palace, Jaipur Marker and add it to the map.
+	// Crear un marcador para el Palacio Amber, Jaipur y añadirlo al mapa.
 	var marker1 = new mapboxgl.Marker({
 		element: img1
 	})
@@ -53,7 +53,7 @@ function success(position) {
 		.addTo(map);
 
 	var img2 = document.querySelector("#gateway")
-	// Create a  Gateway of India, Mumbai Marker and add it to the map.
+	// Crear un marcador de la Entrada de la India, Mumbai y añadirlo al mapa.
 	var marker2 = new mapboxgl.Marker({
 		element: img2
 	})
@@ -61,7 +61,7 @@ function success(position) {
 		.addTo(map);
 
 	var img3 = document.querySelector("#gate")
-	// Create a India Gate Marker and add it to the map.
+	// Crear un marcador de la Puerta de la India, Mumbai y añadirlo al mapa.
 	var marker3 = new mapboxgl.Marker({
 		element: img3
 	})
@@ -71,7 +71,7 @@ function success(position) {
 
 	var img4 = document.querySelector("#lotus")
 
-	// Create a Lotus Temple, Delhi Marker and add it to the map.
+	// Crear un marcador de Templo del Loto, Delhi y añadirlo al mapa.
 	var marker4 = new mapboxgl.Marker({
 		element: img4
 	})
@@ -79,7 +79,7 @@ function success(position) {
 		.addTo(map);
 
 
-	//Create a Victoria Memorial, Kolkata Marker and add it to the map.
+	// Crear un marcador del Victoria Memorial, Kolkata y añadirlo al mapa.
 	var img5 = document.querySelector("#victoria")
 
 	var marker5 = new mapboxgl.Marker({

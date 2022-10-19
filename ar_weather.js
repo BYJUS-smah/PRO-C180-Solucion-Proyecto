@@ -15,7 +15,7 @@ function get_coordinates() {
         coordinates.destination_lat = destination.split(";")[0]
         coordinates.destination_lon = destination.split(";")[1]
     } else {
-        alert("Coordinates not selected!")
+        alert("¡Coordenadas no seleccionadas!")
         window.history.back();
     }
 }
@@ -31,7 +31,7 @@ function get_weather() {
                 `
                     <a-entity gps-entity-place="latitude: ${steps[i].maneuver.location[1]}; longitude: ${steps[i].maneuver.location[0]};">
                         <a-entity>
-                            <a-text height="50" value="Weather forcast is ${weather} at ${name}"></a-text>
+                            <a-text height="50" value="El pronóstico del clima es ${weather} en ${name}"></a-text>
                         </a-entity>
                     </a-entity>
                 `
