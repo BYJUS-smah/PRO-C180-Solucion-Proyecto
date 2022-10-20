@@ -61,7 +61,7 @@ function success(position) {
 		.addTo(map);
 
 	var img3 = document.querySelector("#gate")
-	// Crear un marcador de la Puerta de la India, Mumbai y añadirlo al mapa.
+	// Crear un marcador de la Puerta de la India y añadirlo al mapa.
 	var marker3 = new mapboxgl.Marker({
 		element: img3
 	})
